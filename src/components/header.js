@@ -8,8 +8,8 @@ import './header.css';
 export default function Header(props) {
     return (
         <header>
-            <TopNav />
-            {/* <InfoModal /> */}
+            <TopNav  onRestartGame={() => props.onRestartGame()}/>
+            { props.infoModal && <InfoModal /> }
             <h1>HOT or COLD</h1>
         </header>
     );
